@@ -18,6 +18,14 @@
     "hardhat": "^2.12.6"
   },
   "dependencies": {
-    "@nomiclabs/hardhat-etherscan": "^3.1.5"
+    "@balancer-labs/v2-asset-manager-utils": "^0.2.0",
+    "@balancer-labs/v2-pool-stable": "^2.0.0",
+    "@balancer-labs/v2-pool-utils": "^3.0.1",
+    "@balancer-labs/v2-solidity-utils": "^3.0.1",
+    "@balancer-labs/v2-vault": "^3.0.1",
+    "@nomiclabs/hardhat-etherscan": "^3.1.5",
+    "@openzeppelin/contracts": "^4.8.1",
+    "dotenv": "^16.0.3",
+    "npm": "^9.3.1"
   }
 }

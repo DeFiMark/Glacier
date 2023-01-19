@@ -1,6 +1,8 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
-let secret = require("./secret");
+require('dotenv').config();
+const privateKey = process.env.PRIVATE_KEY;
+const etherscanKey = process.env.ETHERSCAN_KEY;
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   networks: {
@@ -9,36 +11,45 @@ module.exports = {
     },
     bscTestnet: {
       url: 'https://data-seed-prebsc-2-s1.binance.org:8545/',
-      accounts: [secret.key]
+      accounts: [privateKey]
     },
     bscMainnet: {
       url: 'https://bsc-dataseed.binance.org',
-      accounts: [secret.key]
+      accounts: [privateKey]
     },
   },
   etherscan: {
-    apiKey: secret.apiKey
+    apiKey: etherscanKey
   },
   solidity: {
     compilers: [
-      // {
-      //   version: "0.8.14",
-      //   settings: {
-      //     optimizer: {
-      //       enabled: true,
-      //       runs: 200
-      //     }
-      //   }
-      // },
-      // {
-      //   version: "0.8.4",
-      //   settings: {
-      //     optimizer: {
-      //       enabled: true,
-      //       runs: 200
-      //     }
-      //   }
-      // },
+      {
+        version: "0.8.7",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200
+          }
+        }
+      },
+      {
+        version: "0.8.0",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200
+          }
+        }
+      },
+      {
+        version: "0.7.1",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200
+          }
+        }
+      },
       {
         version: "0.7.0",
         settings: {
