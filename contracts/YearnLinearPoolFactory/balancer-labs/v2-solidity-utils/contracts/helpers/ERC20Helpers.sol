@@ -14,7 +14,7 @@
 
 pragma solidity ^0.7.0;
 
-import "./v2-vault/contracts/interfaces/IAsset.sol";
+import "../../../v2-vault/contracts/interfaces/IAsset.sol";
 
 import "../openzeppelin/IERC20.sol";
 

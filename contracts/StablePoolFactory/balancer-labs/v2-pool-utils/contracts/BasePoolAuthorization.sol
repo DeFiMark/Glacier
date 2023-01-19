@@ -15,7 +15,7 @@
 pragma solidity ^0.7.0;
 
 import "@balancer-labs/v2-solidity-utils/contracts/helpers/Authentication.sol";
-import "./v2-vault/contracts/interfaces/IAuthorizer.sol";
+import "../../v2-vault/contracts/interfaces/IAuthorizer.sol";
 
 import "./BasePool.sol";
 

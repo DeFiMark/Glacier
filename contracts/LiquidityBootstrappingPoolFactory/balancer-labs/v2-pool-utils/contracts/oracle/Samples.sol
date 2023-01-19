@@ -14,7 +14,7 @@
 
 pragma solidity ^0.7.0;
 
-import "./v2-solidity-utils/contracts/helpers/WordCodec.sol";
+import "../../../v2-solidity-utils/contracts/helpers/WordCodec.sol";
 
 import "../interfaces/IPriceOracle.sol";
 

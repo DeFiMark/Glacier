@@ -15,17 +15,17 @@
 pragma solidity ^0.7.0;
 pragma experimental ABIEncoderV2;
 
-import "./v2-solidity-utils/contracts/math/Math.sol";
-import "./v2-solidity-utils/contracts/math/FixedPoint.sol";
-import "./v2-solidity-utils/contracts/helpers/InputHelpers.sol";
-import "./v2-solidity-utils/contracts/helpers/TemporarilyPausable.sol";
-import "./v2-solidity-utils/contracts/helpers/WordCodec.sol";
-import "./v2-solidity-utils/contracts/openzeppelin/ERC20.sol";
+import "../../v2-solidity-utils/contracts/math/Math.sol";
+import "../../v2-solidity-utils/contracts/math/FixedPoint.sol";
+import "../../v2-solidity-utils/contracts/helpers/InputHelpers.sol";
+import "../../v2-solidity-utils/contracts/helpers/TemporarilyPausable.sol";
+import "../../v2-solidity-utils/contracts/helpers/WordCodec.sol";
+import "../../v2-solidity-utils/contracts/openzeppelin/ERC20.sol";
 
-import "./v2-vault/contracts/interfaces/IVault.sol";
-import "./v2-vault/contracts/interfaces/IBasePool.sol";
+import "../../v2-vault/contracts/interfaces/IVault.sol";
+import "../../v2-vault/contracts/interfaces/IBasePool.sol";
 
-import "./v2-asset-manager-utils/contracts/IAssetManager.sol";
+import "../../v2-asset-manager-utils/contracts/IAssetManager.sol";
 
 import "./BalancerPoolToken.sol";
 import "./BasePoolAuthorization.sol";

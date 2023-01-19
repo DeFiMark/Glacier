@@ -22,10 +22,10 @@ import "@balancer-labs/v2-solidity-utils/contracts/helpers/TemporarilyPausable.s
 import "@balancer-labs/v2-solidity-utils/contracts/helpers/WordCodec.sol";
 import "@balancer-labs/v2-solidity-utils/contracts/openzeppelin/ERC20.sol";
 
-import "./v2-vault/contracts/interfaces/IVault.sol";
-import "./v2-vault/contracts/interfaces/IBasePool.sol";
+import "../../v2-vault/contracts/interfaces/IVault.sol";
+import "../../v2-vault/contracts/interfaces/IBasePool.sol";
 
-import "@balancer-labs/v2-asset-manager-utils/contracts/IAssetManager.sol";
+import "../../v2-asset-manager-utils/contracts/IAssetManager.sol";
 
 import "./BalancerPoolToken.sol";
 import "./BasePoolAuthorization.sol";
