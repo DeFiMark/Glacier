@@ -6,7 +6,7 @@ This repo is a collection of hardhat projects. Attempting to merge them all into
 
 run `npx hardhat run scripts/deploy.js --network <NETWORK NAME>` to deploy that particular contract for the directory you are in.
 
-Steps to deploy all:
+Steps to deploy all (along with their bsc testnet addresses)
 
 1. Authorizer (note the address, you'll need it to deploy the vault)
 1. Vault (note the address, you'll nede it to deploy the rest of the contracts: 0xE9f6c7B3B4293C9a9Ff33e98350e595B87f4c5b3)
@@ -24,4 +24,4 @@ Steps to deploy all:
 1. BeetsBar (0x109bb4F7624E8db22416299fE863887B2c63c65b)
 1. CopperProxy (0x0C7cFF1DBEc9db3130B046660C2ef9b4f9Ca7173)
 
-Tip: If you need to change the vault, do a search for const vault = <previous address of the vault> and do a find and replace -- it exists in a lot of scripts.
+Tip: If you need to change the vault, do a search for const vault = `<previous address of the vault>` and do a find and replace -- it exists in a lot of scripts.
