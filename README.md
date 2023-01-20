@@ -23,3 +23,5 @@ Steps to deploy all:
 1. Timelock (0xBD823a1595C4d3A5f34F1a49dAb41039b574A13C)
 1. BeetsBar (0x109bb4F7624E8db22416299fE863887B2c63c65b)
 1. CopperProxy (0x0C7cFF1DBEc9db3130B046660C2ef9b4f9Ca7173)
+
+Tip: If you need to change the vault, do a search for const vault = <previous address of the vault> and do a find and replace -- it exists in a lot of scripts.
