@@ -22,8 +22,13 @@ import "@balancer-labs/v2-pool-utils/contracts/factories/FactoryWidePauseWindow.
 
 import "./MetaStablePool.sol";
 
-contract MetaStablePoolFactory is BasePoolSplitCodeFactory, FactoryWidePauseWindow {
-    constructor(IVault vault) BasePoolSplitCodeFactory(vault, type(MetaStablePool).creationCode) {
+contract MetaStablePoolFactory is
+    BasePoolSplitCodeFactory,
+    FactoryWidePauseWindow
+{
+    constructor(IVault vault)
+        BasePoolSplitCodeFactory(vault, type(MetaStablePool).creationCode)
+    {
         // solhint-disable-previous-line no-empty-blocks
     }
 
@@ -41,7 +46,10 @@ contract MetaStablePoolFactory is BasePoolSplitCodeFactory, FactoryWidePauseWind
         bool oracleEnabled,
         address owner
     ) external returns (address) {
-        (uint256 pauseWindowDuration, uint256 bufferPeriodDuration) = getPauseConfiguration();
+        (
+            uint256 pauseWindowDuration,
+            uint256 bufferPeriodDuration
+        ) = getPauseConfiguration();
 
         return
             _create(
