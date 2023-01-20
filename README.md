@@ -1,6 +1,6 @@
 # Glacier
 
-This repo is a collection of hardhat projects
+This repo is a collection of hardhat projects. Attempting to merge them all into one hardhat project has surfaced a lot of dependencies that step on each other so this was the best way to get it up and running.
 
 `cd` into each one, run `npm i` to install dependencies
 
