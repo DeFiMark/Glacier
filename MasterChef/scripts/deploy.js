@@ -1,11 +1,12 @@
 const hre = require("hardhat");
 const ethers = hre.ethers;
 
-const CONTRACT_NAME = "MetaStablePoolFactory";
-const PATH = "meta/"; // no preceding slash but always trailing slash if there is a path
-const FILE_NAME = "MetaStablePoolFactory";
+const CONTRACT_NAME = "BeethovenxMasterChef";
+const PATH = ""; // no preceding slash but always trailing slash if there is a path
+const FILE_NAME = "MasterChef";
 
-const vault = "0xE9f6c7B3B4293C9a9Ff33e98350e595B87f4c5b3";
+const beets = "0x2b245805A3601458fba61921e166e7A58bb09619";
+const beetsPerBlock = "2500000000000000000";
 
 let Contract;
 let contract;
@@ -34,17 +35,14 @@ async function main () {
     console.log("Deploying contracts with the account:", deployer.address);
     console.log("Account balance:", (await deployer.getBalance()).toString());
 
-    // const lib = await ethers.getContractAt("QueryProcessor", "0x826E371C1810792f616C5D00ade0A6dDA07025dd");
-    
-    Contract = await ethers.getContractFactory(`contracts/${PATH}${FILE_NAME}.sol:${CONTRACT_NAME}`, {
-        libraries: {
-            QueryProcessor: "0x826E371C1810792f616C5D00ade0A6dDA07025dd"
-        }
-    });
-    // Contract = await ethers.getContractFactory(`contracts/${PATH}${FILE_NAME}.sol:${CONTRACT_NAME}`);
+    // Contract
+    Contract = await ethers.getContractFactory(`contracts/${PATH}${FILE_NAME}.sol:${CONTRACT_NAME}`);
+
+    // get current block number
+    const blockNumber = await ethers.provider.getBlockNumber();
 
     // Deploy Contract
-    const args = [vault];
+    const args = [beets, deployer.address, beetsPerBlock, blockNumber + 1];
     contract = await Contract.deploy(...args);
     await contract.deployTransaction.wait();
     console.log("contract deployed to:", contract.address);

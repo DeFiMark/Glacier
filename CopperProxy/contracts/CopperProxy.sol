@@ -86,8 +86,7 @@ contract CopperProxy is Ownable {
     mapping(address => PoolData) private _poolData;
     EnumerableSet.AddressSet private _pools;
 
-    address public constant VAULT =
-        address(0x20dd72Ed959b6147912C2e529F0a0C651c33c9ce);
+    address public immutable VAULT;
     address public immutable _LBPFactoryAddress;
     uint256 public immutable _feeBPS;
     address public _feeRecipient;
@@ -95,11 +94,13 @@ contract CopperProxy is Ownable {
     constructor(
         uint256 feeBPS,
         address feeRecipient,
-        address LBPFactoryAddress
+        address LBPFactoryAddress,
+        address vault_
     ) {
         _feeBPS = feeBPS;
         _feeRecipient = feeRecipient;
         _LBPFactoryAddress = LBPFactoryAddress;
+        VAULT = vault_;
     }
 
     // Events
