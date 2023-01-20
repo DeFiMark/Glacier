@@ -8,7 +8,7 @@ run `npx hardhat run scripts/deploy.js --network <NETWORK NAME>` to deploy that 
 
 Steps to deploy all (along with their bsc testnet addresses)
 
-1. Authorizer (note the address, you'll need it to deploy the vault)
+1. Authorizer (note the address, you'll need it to deploy the vault, 0x9bf8e3d4ec3c1ec250ccf7df32660218bfece0b4)
 1. Vault (note the address, you'll nede it to deploy the rest of the contracts: 0xE9f6c7B3B4293C9a9Ff33e98350e595B87f4c5b3)
 1. Weighted Pool Factory (0xf5F696Db8e655aa47f1aFD6EA9e5DF3510E09cCc)
 1. Weighted Pool 2 Tokens Factory (0xFBfa0777f84772891eFB9Cb79abDB139A258FD17)
