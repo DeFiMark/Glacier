@@ -1,2 +1,5 @@
 node_modules
 artifacts
+.env
+cache
+package-lock.json
